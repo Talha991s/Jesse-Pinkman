@@ -1,0 +1,96 @@
+{
+    "name": "GameInputActions",
+    "maps": [
+        {
+            "name": "ThirdPerson",
+            "id": "d69a5f07-99b6-4d85-8040-c5d2c8deb5c3",
+            "actions": [
+                {
+                    "name": "Movements",
+                    "type": "Value",
+                    "id": "53bbad48-fb3c-487a-a97f-b6555e3fc211",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jumps",
+                    "type": "Button",
+                    "id": "59d0d3e2-c5a8-4d6f-bbb4-c99c113a448d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f8b6a19b-6a46-4fac-b234-c95d204fee74",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jumps",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "6bd66a1b-5274-4500-b13a-1cc2931059a8",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movements",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "142e58bc-dccb-4105-a799-c1739bad4266",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movements",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "d26bf4d5-5554-4e15-ad08-edb0267c19bf",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movements",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "7030936c-2fc0-48b1-b57b-7a20a3346ea3",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movements",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "addb8f5e-458b-4c63-8a74-feacb5528649",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movements",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
