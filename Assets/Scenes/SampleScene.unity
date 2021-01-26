@@ -366,7 +366,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16708
+  m_Name: pb_Mesh16706
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -579,43 +579,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 5966334487777862412, guid: b987527df265a594d999b9efb80758b9, type: 3}
+      propertyPath: WalkSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825039492820962646, guid: b987527df265a594d999b9efb80758b9, type: 3}
+      propertyPath: isRunning
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b987527df265a594d999b9efb80758b9, type: 3}
---- !u!1 &2021801783 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2745054032248230952, guid: b987527df265a594d999b9efb80758b9, type: 3}
-  m_PrefabInstance: {fileID: 2021801782}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2021801784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021801783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: b4628f77ed0e33f40b7fd471f70f66b7, type: 3}
-  m_NotificationBehavior: 1
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: ThirdPerson
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &2095755819
 GameObject:
   m_ObjectHideFlags: 0
