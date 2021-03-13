@@ -15,5 +15,8 @@ namespace Character
         public bool IsReloading;
         public bool IsJumping;
         public bool IsRunning;
+        public bool IsPaused;
+        public bool IsResume;
+        public bool IsBackToMainMenu;
     }
 }
