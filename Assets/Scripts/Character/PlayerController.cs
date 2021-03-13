@@ -5,6 +5,7 @@ using Character.UI;
 
 namespace Character
 {
+    
     public class PlayerController : MonoBehaviour
     {
         public Crosshair Crosshair => crosshairComponent;

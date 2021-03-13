@@ -16,6 +16,9 @@ namespace Character
 
         [SerializeField] private Transform weaponSocketLocation;
 
+        [SerializeField]
+        private AudioSource ReloadSound;
+
         private Transform GripIKLocation;
 
         //compnents
@@ -79,6 +82,7 @@ namespace Character
         {
             // Debug.Log("Reloading");
             StartReloading();
+            ReloadSound.Play();
 
         }
         public void StartReloading()

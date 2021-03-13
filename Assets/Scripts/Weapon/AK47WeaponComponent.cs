@@ -8,8 +8,15 @@ namespace Weapon
 {
     public class AK47WeaponComponent : WeaponComponent
     {
+        private int damage = 1;
         private Camera ViewCamera;
         private RaycastHit HitLocation;
+        [SerializeField]
+        private ParticleSystem shotparticle;
+        [SerializeField]
+        private AudioSource ShootingSound;
+
+
 
         private void Awake()
         {
@@ -18,11 +25,14 @@ namespace Weapon
 
         protected override void FireWeapon()
         {
-            Debug.Log("FiringWEAPON"); 
+            Debug.Log("FiringWEAPON");
+            
 
             if(WeaponStats.BulletInClip >0 && !Reloading && !WeaponHolder.Controller.IsJumping)
             {
                 base.FireWeapon();
+                shotparticle.Play();
+                ShootingSound.Play();
                 Ray screenRay = ViewCamera.ScreenPointToRay(new Vector3(Crosshair.CurrentAimPosition.x,
                     Crosshair.CurrentAimPosition.y, 0.0f));
 
@@ -34,6 +44,12 @@ namespace Weapon
                     Debug.DrawRay(ViewCamera.transform.position, RayDirection * WeaponStats.FireDistance, Color.red);
 
                     HitLocation = hit;
+
+                    var health = HitLocation.collider.GetComponent<Heath>(); // destroy object on hit.
+                    if(health !=null)
+                    {
+                        health.TakeDamage(damage);
+                    }
                 }
                 
             }

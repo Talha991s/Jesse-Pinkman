@@ -36,6 +36,8 @@ namespace Weapon
     public class WeaponComponent : MonoBehaviour
     {
         //public Transform handposition;
+
+  
         public Transform GripLocation => GripIKLocation;
         [SerializeField] private Transform GripIKLocation;
 
@@ -76,6 +78,7 @@ namespace Weapon
         public void StartReloading()
         {
             Reloading = true;
+           
             ReloadWeapon();
         }
 
