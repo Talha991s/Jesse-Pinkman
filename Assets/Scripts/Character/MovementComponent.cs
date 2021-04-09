@@ -24,6 +24,7 @@ namespace Character
         private Vector2 InputVector = Vector2.zero;
         private Vector3 MoveDirection = Vector3.zero;
 
+
         //Animator Hashes
         public readonly int MovementXHash = Animator.StringToHash("MovementX");
         public readonly int MovementYHash = Animator.StringToHash("MovementY");
@@ -83,11 +84,11 @@ namespace Character
             }
 
             MoveDirection = (PlayerTransform.forward * InputVector.y) + (PlayerTransform.right * InputVector.x);
-           
+            
             float currentSpeed = PlayerController.IsRunning ? RunSpeed : WalkSpeed;
 
-            Vector3 movementDirection = MoveDirection * (currentSpeed * Time.deltaTime);
-
+            Vector3 movementDirection =MoveDirection * (currentSpeed * Time.deltaTime);
+           // PlayerRigidBody.MovePosition(transform.position + movementDirection);
             MeshAgent.Move(movementDirection);
 
             //PlayerTransform.position += movementDirection;

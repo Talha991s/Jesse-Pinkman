@@ -53,10 +53,5 @@ public class EnemyShooting : MonoBehaviour
         shotgun.Play();
         attackTimer = 0;
         healthTarget.TakeDamage(5);
-
-        //if (healthTarget = null)
-        //{
-            
-        //}
     }
 }

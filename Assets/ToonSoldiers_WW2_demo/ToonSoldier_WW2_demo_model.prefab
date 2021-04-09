@@ -140,12 +140,12 @@ GameObject:
   - component: {fileID: 9517976}
   - component: {fileID: 1802259209}
   - component: {fileID: 1802259211}
-  - component: {fileID: 1802259210}
   - component: {fileID: 1802259212}
   - component: {fileID: 1802259213}
   - component: {fileID: 1802259216}
   - component: {fileID: 1026395407466534790}
   - component: {fileID: 5009154682845562342}
+  - component: {fileID: 172818193579149040}
   m_Layer: 0
   m_Name: ToonSoldier_WW2_demo_model
   m_TagString: Untagged
@@ -215,19 +215,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1802259210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9492b445fe35ce44c94fece58b0d6842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 5
 --- !u!114 &1802259212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +274,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingeffect: {fileID: 7720028798339912702}
-  shootanim: {fileID: 9517976}
   shotgun: {fileID: 5009154682845562342}
   attackRefreshRate: 1.5
 --- !u!82 &5009154682845562342
@@ -386,6 +372,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &172818193579149040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d68c38b1c534ae4e942f00d54a1283a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 5
+  CurrentHealth: 0
 --- !u!1 &120650
 GameObject:
   m_ObjectHideFlags: 0

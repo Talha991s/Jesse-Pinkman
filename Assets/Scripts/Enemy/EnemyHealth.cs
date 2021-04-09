@@ -2,20 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Heath : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     [SerializeField]
-    private int startingHealth =50;
+    private int startingHealth = 5;
 
-    [SerializeField]private int CurrentHealth;
+    [SerializeField] private int CurrentHealth;
 
-    public HealthBar healthBar;
-
-    private void Start()
-    {
-        healthBar.SetMaxHealth(startingHealth);
-    }
     private void OnEnable()
     {
         CurrentHealth = startingHealth;
@@ -23,8 +16,8 @@ public class Heath : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         CurrentHealth -= damageAmount;
-        healthBar.SetHealth(CurrentHealth);
-        if(CurrentHealth <= 0)
+       // healthBar.SetHealth(CurrentHealth);
+        if (CurrentHealth <= 0)
         {
             Die();
         }

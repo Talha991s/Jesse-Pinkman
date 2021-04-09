@@ -45,7 +45,7 @@ namespace Weapon
 
                     HitLocation = hit;
 
-                    var health = HitLocation.collider.GetComponent<Heath>(); // destroy object on hit.
+                    var health = HitLocation.collider.GetComponent<EnemyHealth>(); // destroy object on hit.
                     if(health !=null)
                     {
                         health.TakeDamage(damage);
