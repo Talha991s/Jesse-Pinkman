@@ -91,6 +91,7 @@ namespace Weapon
             int bulletRoReload = WeaponStats.ClipSize - WeaponStats.TotalBulletAvailable;
             if(bulletRoReload <0)
             {
+               
                 Debug.Log("OUT OF AMMO");
                 WeaponStats.BulletInClip  = WeaponStats.ClipSize;
                 WeaponStats.TotalBulletAvailable -= WeaponStats.ClipSize;

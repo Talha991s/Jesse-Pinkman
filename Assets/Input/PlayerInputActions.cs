@@ -72,7 +72,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""id"": ""a92321c0-4d5c-4ae2-89c3-8aa85a0122b1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": ""NormalizeVector2"",
-                    ""interactions"": ""Press(behavior=2)""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Resume"",
@@ -80,7 +80,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""id"": ""2d443b4d-7f0a-4b6a-84de-b20a66aba8ed"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": ""NormalizeVector2"",
-                    ""interactions"": ""Press""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""MainMenu"",
@@ -88,7 +88,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""id"": ""3f370388-5516-457b-abe6-c75ad770a861"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": ""NormalizeVector2"",
-                    ""interactions"": ""Press""
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [

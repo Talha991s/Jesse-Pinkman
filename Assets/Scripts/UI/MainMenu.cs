@@ -14,12 +14,8 @@ public class MainMenu : MonoBehaviour
     }
     public void QuitGame()
     {
-       // Click.Play();
+        Click.Play();
         Application.Quit();
     }
-    public void BackToMainMenu()
-    {
-      //  Click.Play();
-        SceneManager.LoadScene(0);
-    }
+ 
 }

@@ -19,4 +19,6 @@ namespace Character
         public bool IsResume;
         public bool IsBackToMainMenu;
     }
+
+    
 }
