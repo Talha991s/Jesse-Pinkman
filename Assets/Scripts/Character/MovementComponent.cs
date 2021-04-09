@@ -12,6 +12,7 @@ namespace Character
         [SerializeField] private float RunSpeed;
         [SerializeField] private float JumpForce;
 
+       
         //components
         private PlayerController PlayerController;
 
@@ -24,6 +25,7 @@ namespace Character
         private Vector2 InputVector = Vector2.zero;
         private Vector3 MoveDirection = Vector3.zero;
 
+        public GameObject inventory;
 
         //Animator Hashes
         public readonly int MovementXHash = Animator.StringToHash("MovementX");
@@ -47,7 +49,24 @@ namespace Character
             InputVector = value.Get<Vector2>();
             PlayerAnimator.SetFloat(MovementXHash, InputVector.x);
             PlayerAnimator.SetFloat(MovementYHash, InputVector.y);
+            
 
+        }
+
+        public void OnInventory(InputValue value)
+        {
+            
+           // PlayerController.IsInventoryOpen = value.isPressed;
+           // PlayerController.IsInventoryOpen = true;
+            inventory.SetActive(true);
+            AppEvents.Invoke_OnMouseCursorEnable(true);
+        }
+        public void OnInventoryClosed()
+        {
+            
+            //PlayerController.IsInventoryOpen=false;
+            inventory.SetActive(false);
+            AppEvents.Invoke_OnMouseCursorEnable(false);
         }
 
         public void OnRun(InputValue value)

@@ -18,6 +18,7 @@ namespace Character
         public bool IsPaused;
         public bool IsResume;
         public bool IsBackToMainMenu;
+        public bool IsInventoryOpen;
     }
 
     

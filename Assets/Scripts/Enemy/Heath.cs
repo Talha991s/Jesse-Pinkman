@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class Heath : MonoBehaviour
 {
+    public AudioSource damagesound;
+
+
     [SerializeField]
     private int startingHealth =50;
 
-    [SerializeField]private int CurrentHealth;
+    [SerializeField]public int CurrentHealth;
 
     public HealthBar healthBar;
 
@@ -22,11 +25,13 @@ public class Heath : MonoBehaviour
     }
     public void TakeDamage(int damageAmount)
     {
+        damagesound.Play();
         CurrentHealth -= damageAmount;
         healthBar.SetHealth(CurrentHealth);
         if(CurrentHealth <= 0)
         {
             Die();
+            
         }
     }
 

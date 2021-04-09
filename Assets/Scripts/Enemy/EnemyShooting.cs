@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyShooting : MonoBehaviour
 {
     private Detection detect;
@@ -10,6 +11,8 @@ public class EnemyShooting : MonoBehaviour
     public ParticleSystem shootingeffect;
     //public Animator shootanim;
     public AudioSource shotgun;
+    public AudioSource P_dyingsound;
+    
 
     [SerializeField]
     private float attackRefreshRate =1.5f;
@@ -40,6 +43,7 @@ public class EnemyShooting : MonoBehaviour
                 Attack();
             }
         }
+
     }
 
     private bool CanAttack()
@@ -53,5 +57,21 @@ public class EnemyShooting : MonoBehaviour
         shotgun.Play();
         attackTimer = 0;
         healthTarget.TakeDamage(5);
+        if (healthTarget.CurrentHealth <= 0)
+        {
+            P_dyingsound.Play();
+            shootingeffect.Stop();
+            shotgun.Stop();
+            attackTimer = 1;
+            //StartCoroutine("playsound");
+            // StartCoroutine(playsound());
+            //playsound();
+        }
+    }
+
+    IEnumerator playsound()
+    {
+        P_dyingsound.Stop();
+        yield return new WaitForSeconds(2.0f);
     }
 }
