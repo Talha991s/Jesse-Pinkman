@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Health Potion
   icon: {fileID: 21300000, guid: 4a7187e212279f145ae4ee50be39fa59, type: 3}
+  heal: 5

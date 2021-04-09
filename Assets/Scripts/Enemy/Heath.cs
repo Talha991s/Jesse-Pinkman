@@ -18,6 +18,11 @@ public class Heath : MonoBehaviour
     private void Start()
     {
         healthBar.SetMaxHealth(startingHealth);
+        
+    }
+    private void Update()
+    {
+       
     }
     private void OnEnable()
     {
@@ -38,5 +43,17 @@ public class Heath : MonoBehaviour
     private void Die()
     {
         gameObject.SetActive(false);
+    }
+
+    public void Heal( int amount)
+    {
+        Debug.Log("eating0");
+        CurrentHealth += amount;
+        if (CurrentHealth == startingHealth)
+        {
+            startingHealth = CurrentHealth;
+           // Heal(0);
+        }
+        healthBar.Slider.value = CurrentHealth;
     }
 }

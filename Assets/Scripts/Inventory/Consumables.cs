@@ -5,15 +5,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new Consumable", menuName = "Item/Consumables")]
 public class Consumables : Items
 {
-    // Start is called before the first frame update
-    void Start()
+    public int heal = 0;
+    private Heath heath;
+    public override void Use()
     {
-        
-    }
+        GameObject player = Inventory.instance.player;
+        Heath playerhealth = player.GetComponent<Heath>();
+        playerhealth.Heal(heal);
+        Inventory.instance.Remove(this);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

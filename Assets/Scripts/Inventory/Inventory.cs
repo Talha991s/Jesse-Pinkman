@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public static Inventory instance;
     public GameObject player;
     public GameObject inventoryPanel;
 
@@ -30,8 +31,23 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void Add(Items item)
+    {
+        if(list.Count < 9)
+        { 
+            list.Add(item);
+        }
+        updatePanelSlots();
+    }
+    public void Remove(Items item)
+    {
+        list.Remove(item);
+        updatePanelSlots();
+    }
+
     private void Start()
     {
+        instance = this;
         updatePanelSlots();
     }
 }

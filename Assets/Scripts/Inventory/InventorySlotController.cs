@@ -33,7 +33,7 @@ public class InventorySlotController : MonoBehaviour
     {
         if(item)
         {
-            Debug.Log("You Clicked" + item.itemName);
+            item.Use();
         }
     }
 }

@@ -98,6 +98,7 @@ namespace Weapon
             }
             else
             {
+                
                 Debug.Log("Reload");
                 WeaponStats.BulletInClip = WeaponStats.TotalBulletAvailable;
                 WeaponStats.TotalBulletAvailable =0;
