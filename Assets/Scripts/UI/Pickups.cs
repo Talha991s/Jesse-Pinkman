@@ -8,7 +8,8 @@ public class Pickups : MonoBehaviour
     [SerializeField] private int numMethatStart = 0;
     [SerializeField] private int collected;
     public ProgressBar progressBar;
-
+    public GameObject door;
+    public GameObject rush;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +31,19 @@ public class Pickups : MonoBehaviour
         }
         if (collected == 10)
         {
+            AppEvents.Invoke_OnMouseCursorEnable(true);
+            rush.SetActive(true);
+            Destroy(door);
+            //door.gameObject.SetActive(false);
             Debug.Log("YOU WIN");
         }
     }
      
+    public void CloseRush()
+    {
+        rush.SetActive(false);
+        AppEvents.Invoke_OnMouseCursorEnable(false);
+        //Click.Play();
+    }
     
 }

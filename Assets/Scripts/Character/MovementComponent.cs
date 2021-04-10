@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 namespace Character
 {
@@ -120,6 +121,15 @@ namespace Character
             MeshAgent.enabled = true;
             PlayerController.IsJumping = false;
             PlayerAnimator.SetBool(IsJumpingHash, false);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if(other.gameObject.CompareTag("Win"))
+            {
+                SceneManager.LoadScene(2);
+                AppEvents.Invoke_OnMouseCursorEnable(true);
+            }
         }
     }
 }

@@ -57,7 +57,7 @@ MonoBehaviour:
     TotalBulletAvailable: 200
     FireStartsDelay: 0
     FireRate: 0.1
-    FireDistance: 100
+    FireDistance: 15
     Repeating: 1
     WeaponHitLayer:
       serializedVersion: 2

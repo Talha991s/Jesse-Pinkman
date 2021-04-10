@@ -11,7 +11,7 @@ public class EnemyShooting : MonoBehaviour
     public ParticleSystem shootingeffect;
     //public Animator shootanim;
     public AudioSource shotgun;
-    public AudioSource P_dyingsound;
+
     
 
     [SerializeField]
@@ -59,7 +59,7 @@ public class EnemyShooting : MonoBehaviour
         healthTarget.TakeDamage(5);
         if (healthTarget.CurrentHealth <= 0)
         {
-            P_dyingsound.Play();
+           // P_dyingsound.Play();
             shootingeffect.Stop();
             shotgun.Stop();
             attackTimer = 1;
@@ -69,9 +69,5 @@ public class EnemyShooting : MonoBehaviour
         }
     }
 
-    IEnumerator playsound()
-    {
-        P_dyingsound.Stop();
-        yield return new WaitForSeconds(2.0f);
-    }
+
 }
